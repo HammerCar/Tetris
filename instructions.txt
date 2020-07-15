@@ -1,0 +1,43 @@
+# Käyttöohje
+
+Peli alkaa kun painaa start nappulaa.
+Pelin voi pysäyttää pause nappulaa painamalla ja jatkaa painamalla sitä uudelleen.
+Pelin voi sulkea close nappulasta.
+
+Ohjaukset:
+  A - Liiku vasemmalle
+  D - Liiku oikealle
+  Q - pyöritä vastapäivään
+  E - Pyöritä myötäpäivään
+  S - Nopeuta tippumista
+  Shift - Tiputa kerralla
+  W - Laita tetromino holdiin
+
+Pelissä on vaikeustasoja.
+Vaikeustaso suurenee kuuden poistetun rivin välein.
+Vaikeustaso vaikuttaa tetrominojen nopeuteen ja rivien poistamisesta saatuihin pisteisiin
+
+Lisäominaisuudet:
+  - Pelissä on kaikki 7 tetrominoa
+  - Tetrominoa pystyy kääntämään
+  - Jo pysähtynyttä tetromioa voi liikuttaa kunnes uusi tetromino ilmestyy pelialueelle
+  - Täysinäiset vaakarivit poistetaan
+  - Pelin aikana kerrotaan siihen mennessä kulunut aikana
+  - Pelissä on pisteenlasku
+  - Pelissä on erilaisia vaikeustasoja
+  - Tetrominojen putoaminen nopeutuu automaattisesti pelin edetessä
+  - Pelin voi palauttaa alkutilanteeseen
+  - Seuraava tetromino on näkyvissä
+  - Pelissä on pitotoiminto (hold)
+  - Putoavan tetrominon pystyy pudottamaan kerralla alas
+
+
+# Rakenne ja suunnittelupäätökset
+
+Pelin laskentapuoli on jaettu omaan Engine luokkaan.
+Tetrominojen toimintaa on myös jaettu tetromino luokkaan.
+Pelialueen rakenne on vektori Block rakenteista, jotka mainwindow piirtää pelialueelle.
+
+Tetrominojen pyörittämistä varten on käytetty super rotation systeemiä,
+jossa pyörittämisen lisäksi tetromina liikutetaan valmiiksi päätettyihin
+paikkoihin tetrominon ympärillä, jotta pyörittäminen olisi melkein aina mahdollista
